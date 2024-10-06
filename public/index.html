@@ -4,32 +4,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Data Website</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header>
-        <h1>Sports Data Insights</h1>
+        <div class="nav-bar">
+            <h1>Sports Data Insights</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section id="data-section">
-            <p>Welcome to the Sports Data website. Here, you'll find insights and analytics about various sports.</p>
-            <button onclick="fetchData()">Get Latest Data</button>
-            <div id="output"></div>
+        <section id="main-banner" class="slider reveal">
+            <div class="banner-slide">
+                <img src="../assets/main-news1.jpg" alt="Breaking News 1">
+                <div class="banner-caption">
+                    <h2>Breaking News: Major Soccer Tournament Updates</h2>
+                    <p>Catch up with all the latest action from the biggest soccer tournaments happening now.</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <img src="../assets/main-news2.jpg" alt="Breaking News 2">
+                <div class="banner-caption">
+                    <h2>Basketball Finals: Thrilling Moments from the Championship</h2>
+                    <p>Relive the breathtaking moments from last night's basketball championship game.</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <img src="../assets/main-news3.jpg" alt="Breaking News 3">
+                <div class="banner-caption">
+                    <h2>Tennis Grand Slam: Key Highlights and Scores</h2>
+                    <p>Find out who made it through to the final stages of the Grand Slam tournament.</p>
+                </div>
+            </div>
+        </section>
+        <section id="hero-section" class="reveal">
+            <div class="hero-content">
+                <h2>Stay Updated with Real-Time Sports Analytics</h2>
+                <p>Explore the latest statistics, scores, and insights from your favorite sports.</p>
+                <button>Explore Now</button>
+            </div>
+        </section>
+        <section id="data-section" class="reveal">
+            <h2>Latest Highlights</h2>
+            <div class="slider cards-container">
+                <div class="card reveal">
+                    <img src="../assets/soccer.jpg" alt="Soccer Highlights">
+                    <h3>Soccer</h3>
+                    <p>Latest scores and match insights from top soccer leagues around the world.</p>
+                    <button>View Details</button>
+                </div>
+                <div class="card reveal">
+                    <img src="../assets/basketball.jpg" alt="Basketball Highlights">
+                    <h3>Basketball</h3>
+                    <p>Catch up on the action from the NBA and other major basketball tournaments.</p>
+                    <button>View Details</button>
+                </div>
+                <div class="card reveal">
+                    <img src="../assets/tennis.jpg" alt="Tennis Highlights">
+                    <h3>Tennis</h3>
+                    <p>Get the latest updates and scores from tennis matches worldwide.</p>
+                    <button>View Details</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; [2024] Sports Data by [Julian Rosales]. All rights reserved.</p>
+        <p>&copy; [YEAR] Sports Data by [YOUR NAME]. All rights reserved.</p>
     </footer>
     <script>
-        async function fetchData() {
-            try {
-                // Make a request to the backend endpoint that will fetch data securely
-                const response = await fetch('http://127.0.0.1:5000/get-data');
-                const data = await response.json();
-                document.getElementById('output').innerText = JSON.stringify(data, null, 2);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            ScrollReveal().reveal('.reveal', {
+                duration: 1500,
+                distance: '50px',
+                easing: 'ease-in-out',
+                origin: 'bottom',
+                reset: true
+            });
+
+            // Initialize Slick Slider for Main Banner
+            $('#main-banner').slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots: true,
+                arrows: true,
+                fade: true
+            });
+
+            // Initialize Slick Slider for Soccer Section
+            $('.cards-container').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                dots: true,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
     </script>
 </body>
 </html>
