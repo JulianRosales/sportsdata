@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Data Website</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sports Data Insights</h1>
+    </header>
+    <main>
+        <section id="data-section">
+            <p>Welcome to the Sports Data website. Here, you'll find insights and analytics about various sports.</p>
+            <button onclick="fetchData()">Get Latest Data</button>
+            <div id="output"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; [2024] Sports Data by [Julian Rosales]. All rights reserved.</p>
+    </footer>
+    <script>
+        async function fetchData() {
+            try {
+                // Make a request to the backend endpoint that will fetch data securely
+                const response = await fetch('http://127.0.0.1:5000/get-data');
+                const data = await response.json();
+                document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+    </script>
+</body>
+</html>
