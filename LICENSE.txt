@@ -1,0 +1,23 @@
+# Exclusive Monetization License
+
+Copyright (c) [2024] [Julian Rosales]
+
+Permission is hereby granted to any individual or entity obtaining a copy of this software (the "Software"), to use, reproduce, and modify the Software for personal, non-commercial purposes, subject to the following conditions:
+
+1. **Monetization Rights**: The right to monetize or commercially exploit the Software, in part or in whole, is exclusively reserved for [Julian Rosales]. No individual or entity is permitted to sell, distribute, or otherwise monetize the Software without express written permission from [YOUR NAME].
+
+2. **Permission for Use**: Any individual or entity wishing to use, distribute, or modify the Software for commercial purposes must seek prior written permission from [Julian Rosales]. Such permission may be granted or denied at [Julian Rosales]'s sole discretion.
+
+3. **Non-Commercial Use**: Use of the Software for personal, educational, or non-commercial research purposes is permitted, provided that this notice is included in all copies or substantial portions of the Software.
+
+4. **Warranty Disclaimer**: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+5. **Attribution**: Any use of the Software must include appropriate attribution to [Julian Rosales], including any modifications made.
+
+6. **Termination**: Any violation of the terms outlined in this license will result in immediate termination of the rights granted herein.
+
+---
+
+[Julian Rosales] retains all rights not expressly granted by this license.
+
+---
